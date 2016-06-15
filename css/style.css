@@ -2,12 +2,19 @@
     font-family: Trebuchet MS;
 }
 
-body, ul, li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
 
-p, li, h1, h2, h3, h4 {
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
     color: #4e4e4e;
 }
 
@@ -19,7 +26,7 @@ body {
     width: 96%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2%;  
+    padding: 0 2%;
 }
 
 header {
@@ -27,7 +34,9 @@ header {
     padding: 20px 0;
 }
 
+
 /* text-indent to hide text but still available for screen readers*/
+
 header h1 {
     margin: 0;
     text-indent: -10000px;
@@ -42,7 +51,7 @@ header nav {
 
 header:after {
     display: block;
-    content: "";    
+    content: "";
     clear: both;
 }
 
@@ -77,7 +86,6 @@ header nav li a.current {
 
 #main-banner img {
     width: 100%;
-    
 }
 
 #selling-points {
@@ -86,11 +94,14 @@ header nav li a.current {
 
 #selling-points li {
     float: left;
-    width: 23%; /* leaves us with 8% for padding  */
-    padding: 1%; 
+    width: 23%;
+    /* leaves us with 8% for padding  */
+    padding: 1%;
     text-align: center;
-    list-style-type: none; /* Remove points */
-    line-height: 1.6em; /* Space between text */
+    list-style-type: none;
+    /* Remove points */
+    line-height: 1.6em;
+    /* Space between text */
 }
 
 #selling-points:after {
@@ -112,13 +123,15 @@ header nav li a.current {
 }
 
 #latest-work li {
-    width: 32%; /* leaves us with 4% for margins  */
+    width: 32%;
+    /* leaves us with 4% for margins  */
     float: left;
     list-style-type: none;
 }
 
-#latest-work img{
-    width: 100%; /* So the images dont overflow */
+#latest-work img {
+    width: 100%;
+    /* So the images dont overflow */
 }
 
 #latest-work li:nth-child(2) {
@@ -147,9 +160,10 @@ p.tags {
 
 #quote {
     margin-top: 60px;
-    width: 60%; /* save 40% for padding */
+    width: 60%;
+    /* save 40% for padding */
     padding: 40px 20%;
-    background: url(../img/quote.png) no-repeat center 40px; 
+    background: url(../img/quote.png) no-repeat center 40px;
     background-color: #efefef;
     color: #4e4e4e;
     font-size: 20px;
@@ -161,26 +175,158 @@ p.tags {
     margin-top: 60px;
 }
 
+footer {
+    background: #202020;
+    padding: 30px 0;
+    border-top: 10px solid #151515;
+}
+
+footer h4 {
+    margin: 0;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+footer ul {
+    float: left;
+    width: 25%;
+    list-style-type: none;
+}
+
+footer li {
+    color: #aaa;
+    width: 80%;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+footer li.tw {
+    padding-left: 20px;
+    background: url(../img/tweet.png) no-repeat left 6px;
+}
+
+footer:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#copyright {
+    clear: both;
+    padding-top: 40px;
+    margin: 30px 0;
+    float: left;
+    /* in order to use margin */
+    width: 100%;
+    border-top: 2px solid #333;
+    color: #999;
+    font-size: 14px;
+}
 
 
+/* MEDIA QUERIES */
 
+@media screen and (max-width: 960px) {
+    #selling-points li {
+        width: 40%;
+        padding: 0 5%;
+        margin: 20px 0;
+    }
+    #selling-points li:nth-child(odd) {
+        clear: both;
+    }
+    footer ul {
+        width: 50%;
+    }
+    footer ul:nth-child(odd) {
+        clear: both;
+    }
+    #quote {
+        width: 90%;
+        padding: 40px 5%;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    header nav {
+        float: none;
+    }
+    header nav li {
+        margin-left: 0;
+        width: 16.66%;
+        /* 100 divded by 6 */
+        text-align: center;
+        font-size: 14px;
+    }
+    header h1.logo {
+        float: none;
+        margin: 0 auto 15px;
+    }
+    #latest-work h2 {
+        text-align: center;
+    }
+    #latest-work li {
+        width: 60%;
+        margin: 30px 20% !important;
+        float: none;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 480px) {
+    #selling-points li {
+        width: 80%;
+        padding: 0 10%;
+        margin: 20px 0;
+    }
+    #latest-work li {
+        width: 80%;
+        margin: 30px 10% !important;
+    }
+    #quote {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    footer ul {
+        width: 100%;
+        float: none;
+        border-top: 2px solid #333;
+    }
+    header nav li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    header nav li a {
+        display: block;
+        /* block so that padding can be applied around */
+        text-align: center;
+        padding: 10px;
+        color: #999;
+        border-top: 1px solid #4f4f4f;
+    }
+    header nav {
+        background: #555;
+    }
+    header .wrapper {
+        padding: 0;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 0;
+    }
+    #burger-nav {
+        width: 100%;
+        height: 40px;
+        background: url(../img/burger.png) no-repeat 98% center;
+        cursor: pointer;
+    }
+    header nav ul {
+        height: 0;
+        overflow: hidden;
+    }
+    header nav ul.open {
+        height: auto;
+    }
+}
